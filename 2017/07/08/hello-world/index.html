@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://liuxiaoyu.cc/2017/07/08/hello-world/index.html">
 <meta property="og:site_name" content="琉小鱼的博客">
 <meta property="og:description" content="之前一直是用wordpress+虚拟主机来搭建博客，买了一年的虚拟主机服务，当时也是图方便，搭建起来也不费事，后来发现自己也没怎么去更新博客内容，一年时间到期了，也没个备份，最后弄得文章都丢了，还好在印象笔记里还有些存货，但都和技术没什么相关性，是些读书的文章。于是，这个博客就诞生了，它的主要功能是为我写一些技术博客提供个性化的渠道。希望自己能坚持写技术博客，每周一篇，以此为鉴。 关于如何用git">
-<meta property="og:updated_time" content="2017-09-10T02:44:38.588Z">
+<meta property="og:updated_time" content="2017-09-10T03:12:34.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次用hexo+github来搭建个人博客">
 <meta name="twitter:description" content="之前一直是用wordpress+虚拟主机来搭建博客，买了一年的虚拟主机服务，当时也是图方便，搭建起来也不费事，后来发现自己也没怎么去更新博客内容，一年时间到期了，也没个备份，最后弄得文章都丢了，还好在印象笔记里还有些存货，但都和技术没什么相关性，是些读书的文章。于是，这个博客就诞生了，它的主要功能是为我写一些技术博客提供个性化的渠道。希望自己能坚持写技术博客，每周一篇，以此为鉴。 关于如何用git">
@@ -69,10 +69,6 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -173,7 +169,7 @@
         <p>之前一直是用wordpress+虚拟主机来搭建博客，买了一年的虚拟主机服务，当时也是图方便，搭建起来也不费事，后来发现自己也没怎么去更新博客内容，一年时间到期了，也没个备份，最后弄得文章都丢了，还好在印象笔记里还有些存货，但都和技术没什么相关性，是些读书的文章。于是，这个博客就诞生了，它的主要功能是为我写一些技术博客提供个性化的渠道。希望自己能坚持写技术博客，每周一篇，以此为鉴。</p>
 <p>关于如何用github+hexo来搭建个人博客，网上也有很多教程，我觉得关键的部分在于git命令行的运用和_config.yml文件的配置。</p>
 <p><strong>下面是hexo常用的命令：</strong></p>
-<h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><p><code>npm install hexo -g</code> #安装<br><code>npm update hexo -g</code> #升级<br><code>hexo init</code> #初始化</p>
+<h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><p><code>npm install hexo -g</code> #安装<br><code>npm update hexo -g</code> #升级<br><code>hexo init</code> #初始化<br><a id="more"></a></p>
 <h3 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h3><p><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo p == hexo publish</code><br><code>hexo g == hexo generate</code>#生成<br><code>hexo s == hexo server</code> #启动服务预览<br><code>hexo d == hexo deploy</code>#部署</p>
 <h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><p><code>hexo server #Hexo</code>会监视文件变动并自动更新，您无须重启服务器。<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
 <p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令<br><code>hexo g</code> #生成静态网页<br><code>hexo d</code> #开始部署</p>
@@ -416,25 +412,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -505,38 +493,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
