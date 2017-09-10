@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://liuxiaoyu.cc/2017/07/08/hello-world/index.html">
 <meta property="og:site_name" content="琉小鱼的博客">
 <meta property="og:description" content="之前一直是用wordpress+虚拟主机来搭建博客，买了一年的虚拟主机服务，当时也是图方便，搭建起来也不费事，后来发现自己也没怎么去更新博客内容，一年时间到期了，也没个备份，最后弄得文章都丢了，还好在印象笔记里还有些存货，但都和技术没什么相关性，是些读书的文章。于是，这个博客就诞生了，它的主要功能是为我写一些技术博客提供个性化的渠道。希望自己能坚持写技术博客，每周一篇，以此为鉴。 关于如何用git">
-<meta property="og:updated_time" content="2017-07-09T11:56:47.211Z">
+<meta property="og:updated_time" content="2017-09-10T01:08:40.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次用hexo+github来搭建个人博客">
 <meta name="twitter:description" content="之前一直是用wordpress+虚拟主机来搭建博客，买了一年的虚拟主机服务，当时也是图方便，搭建起来也不费事，后来发现自己也没怎么去更新博客内容，一年时间到期了，也没个备份，最后弄得文章都丢了，还好在印象笔记里还有些存货，但都和技术没什么相关性，是些读书的文章。于是，这个博客就诞生了，它的主要功能是为我写一些技术博客提供个性化的渠道。希望自己能坚持写技术博客，每周一篇，以此为鉴。 关于如何用git">
@@ -207,7 +207,7 @@
 <p>开启RSS功能<br>编辑<code>hexo/_config.yml</code>，添加如下代码：<br><code>rss: /atom.xml #rss地址  默认即可</code></p>
 <p>开启评论</p>
 <p>1.我使用多说代替自带的评论，在多说 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name</p>
-<p>在根目录<code>_config.yml</code> 添加一行 <code>disqus_shortname: jslite</code> 是在多说注册时产生的<br>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</div><div class="line">&lt;section id=&quot;comments&quot;&gt;</div><div class="line">&lt;div id=&quot;disqus_thread&quot;&gt;</div><div class="line">  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/section&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
+<p>在根目录 “_config.yml” 添加一行 <code>disqus_shortname: jslite</code> 是在多说注册时产生的<br>复制到 <code>themes\landscape\layout\_partial\article.ejs</code><br>把<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</div><div class="line">&lt;section id=&quot;comments&quot;&gt;</div><div class="line">&lt;div id=&quot;disqus_thread&quot;&gt;</div><div class="line">  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/section&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
 <p>改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</div><div class="line">  &lt;section id=&quot;comments&quot;&gt;</div><div class="line">    &lt;!-- 多说评论框 start --&gt;</div><div class="line">    &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;!-- 多说评论框 end --&gt;</div><div class="line">    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    var duoshuoQuery = &#123;short_name:&apos;&lt;%= config.disqus_shortname %&gt;&apos;&#125;;</div><div class="line">      (function() &#123;</div><div class="line">        var ds = document.createElement(&apos;script&apos;);</div><div class="line">        ds.type = &apos;text/javascript&apos;;ds.async = true;</div><div class="line">        ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</div><div class="line">        ds.charset = &apos;UTF-8&apos;;</div><div class="line">        (document.getElementsByTagName(&apos;head&apos;)[0]</div><div class="line">         || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</div><div class="line">      &#125;)();</div><div class="line">      &lt;/script&gt;</div><div class="line">    &lt;!-- 多说公共JS代码 end --&gt;</div><div class="line">  &lt;/section&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
 
       
@@ -300,6 +300,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/07/09/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          markdown语法说明
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
